@@ -35,6 +35,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if error == nil {
             if result.isCancelled == false {
+                self.navigationController?.navigationBarHidden = false
+                self.navigationItem.setHidesBackButton(true, animated: false)
                 performSegueWithIdentifier("clkToMainMenu", sender: self)
             }else{
                 print("Error - login cancelled")
@@ -76,7 +78,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "clkToMainMenu" {
-        
+            let VC = segue.destinationViewController as! UITabBarController
+            VC.navigationItem.setHidesBackButton(true, animated: false)
         }
     }
 }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrentSchoolView" customModule="HackNCClubs" customModuleProvider="target">
+            <connections>
+                <outlet property="lblCurrentSchool" destination="eEG-wF-cbA" id="Big-aS-aZd"/>
+                <outlet property="lblCurrentSchoolName" destination="IJg-XF-YaX" id="RnB-5d-ta3"/>
+                <outlet property="view" destination="iN0-l3-epB" id="NDF-4e-gYB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEG-wF-cbA">
+                    <rect key="frame" x="204" y="248" width="192.5" height="38.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some College Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJg-XF-YaX">
+                    <rect key="frame" x="132" y="312" width="337" height="38.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eEG-wF-cbA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AD4-2D-MBa"/>
+                <constraint firstItem="IJg-XF-YaX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mej-t9-cQg"/>
+                <constraint firstItem="eEG-wF-cbA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-32" id="R31-AZ-T7Y"/>
+                <constraint firstItem="IJg-XF-YaX" firstAttribute="top" secondItem="eEG-wF-cbA" secondAttribute="bottom" constant="25.5" id="evF-VH-FJE"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

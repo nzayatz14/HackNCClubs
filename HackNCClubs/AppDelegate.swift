@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //set root VC based on login status
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let navController = self.window?.rootViewController as! UINavigationController
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -33,13 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if FBSDKAccessToken.currentAccessToken() == nil {
             print("Not logged in")
             initialViewController = storyboard.instantiateViewControllerWithIdentifier("Login") as! LoginViewController
+            navController.navigationBarHidden = true
         }else{
             print("Logged in")
             initialViewController = storyboard.instantiateViewControllerWithIdentifier("Tab") as! UITabBarController
+            navController.navigationBarHidden = false
         }
         
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+        navController.pushViewController(initialViewController, animated: false)
         
         // Override point for customization after application launch.
         return FBSuccess
