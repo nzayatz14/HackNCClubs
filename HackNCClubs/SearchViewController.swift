@@ -1,6 +1,6 @@
 //
 //  SearchViewController.swift
-//  HackNCClubs
+//  HackNCSchools
 //
 //  Created by Nick Zayatz on 10/10/15.
 //  Copyright © 2015 Nick Zayatz. All rights reserved.
@@ -16,8 +16,12 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     var heightOfHeaderView = UIScreen.mainScreen().bounds.width/2
     
-    var schools = ["High Point University", "Duke University", "University of North Carolina, Chapel Hill", "University of North Carolina, Asheville", "Wake Forest University"]
-    var filteredSchools = [String]()
+    var schoolStrings = ["High Point University", "Duke University", "University of North Carolina, Chapel Hill", "University of North Carolina, Asheville", "Wake Forest University"]
+    var schoolImages = [UIImage]()
+    
+    var schools = [nameAndImagePair]()
+    var filteredSchools = [nameAndImagePair]()
+    
     var currentSchool = "High Point University"
     
     var searchActive = false
@@ -25,9 +29,21 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let temp = UIImage(named: "blankImage.png")
+        
+        for var i = 0 ; i < 5; i++ {
+            schoolImages.append(temp!)
+            var tempSchool = nameAndImagePair()
+            tempSchool.name = schoolStrings[i]
+            tempSchool.image = schoolImages[i]
+            schools.append(tempSchool)
+        }
+        
+        
         tblSchools.dataSource = self
         tblSchools.delegate = self
         searchBar.delegate = self
+        
     }
     
     
@@ -35,6 +51,12 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.topItem?.title = "Search"
+    }
+    
+    
+    //make sure the view only goes into portrait mode
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
     
     
@@ -67,9 +89,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         //if we are filtering, show filtered results. If not, show all
         if searchActive {
-            cell.lblCollegeName.text = filteredSchools[indexPath.row]
+            cell.lblCollegeName.text = filteredSchools[indexPath.row].name
+            cell.imgLogo.image = filteredSchools[indexPath.row].image
         }else{
-            cell.lblCollegeName.text = schools[indexPath.row]
+            cell.lblCollegeName.text = schools[indexPath.row].name
+            cell.imgLogo.image = schools[indexPath.row].image
         }
         
         return cell
@@ -192,8 +216,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         //if text is not empty, filter the results
         if searchBar.text != ""{
-            filteredSchools = schools.filter({ (text) -> Bool in
-                let tmp: NSString = text
+            filteredSchools = schools.filter({ (school: nameAndImagePair) -> Bool in
+                let tmp: NSString = school.name
                 let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
                 return range.location != NSNotFound
             })

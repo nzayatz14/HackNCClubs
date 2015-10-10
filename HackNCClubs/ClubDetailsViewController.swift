@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  ClubDetailsViewController.swift
 //  HackNCClubs
 //
 //  Created by Nick Zayatz on 10/10/15.
@@ -8,7 +8,15 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ClubDetailsViewController: UIViewController {
+    
+    
+    @IBOutlet weak var imgLogo: UIImageView!
+    @IBOutlet weak var lblClubName: UILabel!
+    
+    
+    var clubName = String()
+    var clubImage = UIImage()
     
     
     override func viewDidLoad() {
@@ -20,7 +28,8 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.navigationBar.topItem?.title = "Home"
+        imgLogo.image = clubImage
+        lblClubName.text = clubName
     }
     
     

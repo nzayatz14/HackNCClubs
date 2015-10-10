@@ -23,6 +23,12 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     
+    //make sure the view only goes into portrait mode
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    
     /**
     Delegate function called with the user finishes a login for facebook
     
