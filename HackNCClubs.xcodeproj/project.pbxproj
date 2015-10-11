@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6EB6EEE8C9D0DD4F33A788EC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16652A2C38498941F02AD34 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		841FD5EF1BCA088600926938 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FD5EE1BCA088600926938 /* HomeTableCell.swift */; settings = {ASSET_TAGS = (); }; };
+		841FD5F11BCA0D3600926938 /* CalenderHandlerBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FD5F01BCA0D3600926938 /* CalenderHandlerBackend.swift */; settings = {ASSET_TAGS = (); }; };
+		841FD5F31BCA1AFB00926938 /* CreateNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FD5F21BCA1AFB00926938 /* CreateNewEventViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		842515791BC9C2E0001E4FB4 /* ClubTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842515781BC9C2E0001E4FB4 /* ClubTableCell.swift */; settings = {ASSET_TAGS = (); }; };
 		8425157B1BC9C50B001E4FB4 /* ClubDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425157A1BC9C50B001E4FB4 /* ClubDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8425157D1BC9C6BF001E4FB4 /* blankImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8425157C1BC9C6BF001E4FB4 /* blankImage.png */; settings = {ASSET_TAGS = (); }; };
@@ -48,6 +51,9 @@
 /* Begin PBXFileReference section */
 		04BDF27B3A9DEC23B32C12DE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6FE0BB0BEF7EA8974F9E9AB7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		841FD5EE1BCA088600926938 /* HomeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		841FD5F01BCA0D3600926938 /* CalenderHandlerBackend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderHandlerBackend.swift; sourceTree = "<group>"; };
+		841FD5F21BCA1AFB00926938 /* CreateNewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewEventViewController.swift; sourceTree = "<group>"; };
 		842515781BC9C2E0001E4FB4 /* ClubTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubTableCell.swift; sourceTree = "<group>"; };
 		8425157A1BC9C50B001E4FB4 /* ClubDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubDetailsViewController.swift; sourceTree = "<group>"; };
 		8425157C1BC9C6BF001E4FB4 /* blankImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blankImage.png; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 			children = (
 				842515771BC9BE2A001E4FB4 /* Views */,
 				8425157A1BC9C50B001E4FB4 /* ClubDetailsViewController.swift */,
+				841FD5F21BCA1AFB00926938 /* CreateNewEventViewController.swift */,
 				842E2E341BC97D54006760C0 /* HomeViewController.swift */,
 				842E2E321BC96046006760C0 /* LoginViewController.swift */,
 				842E2E381BC97D75006760C0 /* ProfileViewController.swift */,
@@ -131,6 +138,7 @@
 				842E2E3E1BC9890F006760C0 /* CurrentSchoolView.swift */,
 				842E2E3C1BC98766006760C0 /* SchoolTableCell.swift */,
 				842515781BC9C2E0001E4FB4 /* ClubTableCell.swift */,
+				841FD5EE1BCA088600926938 /* HomeTableCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 		842515801BC9D158001E4FB4 /* Supporting Classes */ = {
 			isa = PBXGroup;
 			children = (
+				841FD5F01BCA0D3600926938 /* CalenderHandlerBackend.swift */,
 				8425157E1BC9D139001E4FB4 /* Structs.swift */,
 			);
 			name = "Supporting Classes";
@@ -398,8 +407,11 @@
 				842515791BC9C2E0001E4FB4 /* ClubTableCell.swift in Sources */,
 				84A5002E1BC95E260062CCA6 /* AppDelegate.swift in Sources */,
 				8425157B1BC9C50B001E4FB4 /* ClubDetailsViewController.swift in Sources */,
+				841FD5F11BCA0D3600926938 /* CalenderHandlerBackend.swift in Sources */,
+				841FD5F31BCA1AFB00926938 /* CreateNewEventViewController.swift in Sources */,
 				842E2E351BC97D54006760C0 /* HomeViewController.swift in Sources */,
 				842E2E3D1BC98766006760C0 /* SchoolTableCell.swift in Sources */,
+				841FD5EF1BCA088600926938 /* HomeTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
